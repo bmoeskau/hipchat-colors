@@ -106,7 +106,7 @@ table {
 }
 
 .me {
-    background-color: #F3F7FB;
+    background-color: #f0f4f9;
     border-top-color: #FFFFFF;
 }
 
@@ -197,6 +197,7 @@ table {
 
 .me .nameBlock {
     border-top-color: #F3F7FB;
+    background-color: #dde7f3;
 }
 /* Add padding to make up for the missing borders on name/message blocks */
 .infoBlock p {
@@ -224,12 +225,12 @@ p.timeBlock {
 }
 
 .systemMessage, .systemMessage.yellow {
-    background-color: #FFFBE7;
+    background-color: #fefae2;
 }
 
 .systemMessage .nameBlock, .systemMessage.yellow .nameBlock {
-    border-top-color: #FFFAEA;
-    border-right-color: #FFFAEA;
+    background-color: #fce8b9;
+    font-weight: bold;
 }
 
 .systemMessage .messageBlock {
@@ -237,11 +238,11 @@ p.timeBlock {
 }
 
 .systemMessage.red {
-    background-color: #F9E6E6;
+    background-color: #f6dfdf;
 }
 
 .systemMessage.red .nameBlock {
-    border-top-color: #FFF2F2;
+    background-color: #f0c4c5;
 }
 
 .systemMessage.gray {
@@ -253,19 +254,19 @@ p.timeBlock {
 }
 
 .systemMessage.purple {
-    background-color: #F2F4FD;
+    background-color: #eef0fc;
 }
 
 .systemMessage.purple .nameBlock {
-    border-top-color: #EEE8FC;
+    background-color: #ddd2f8;
 }
 
 .systemMessage.green {
-    background-color: #F5F8E6;
+    background-color: #f2f6e1;
 }
 
 .systemMessage.green .nameBlock {
-    border-top-color: #FFFAEA;
+    background-color: #d8f1c1;
 }
 
 .welcomeMessage {
