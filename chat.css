@@ -1,0 +1,475 @@
+/* Prevent font scaling when switching orientations */
+html {
+    -webkit-text-size-adjust: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+}
+
+li {
+    margin-left: 35px;
+}
+
+a {
+    color: #3572b0;
+}
+
+.systemMessage.green a {
+	color: #106E23;
+}
+
+.systemMessage.red a {
+	color: #BD382C;
+}
+
+table {
+    table-layout: fixed;
+}
+
+.historyLink {
+    width: 100%;
+    text-align: center;
+    background-color: #F0F0F0;
+    padding: 5px 0;
+    display: none;
+}
+
+/* Setup cases where borders should show between messages */
+.chatBlock {
+    border-collapse: collapse;
+}
+.chatBlock.them+.chatBlock.them, .scrollAnchor+.chatBlock.them, .preview+.chatBlock.them {
+    border-top: 1px solid #EFEFEF;
+}
+.chatBlock.them+.systemMessage.them {
+	border-top: none;
+}
+.chatBlock.me+.chatBlock.me, .preview+.chatBlock.me {
+    border-top: 1px solid #ffffff;
+}
+.systemMessage.red+.systemMessage.red,
+.systemMessage.green+.systemMessage.green,
+.systemMessage.purple+.systemMessage.purple,
+.systemMessage.gray+.systemMessage.gray {
+    border-top: 1px solid #FFFFFF;
+}
+
+.systemMessage.yellow+.systemMessage.yellow {
+	border-top: 1px solid #EAEAEA;
+}
+.chatBlock .messageWrapper {
+    margin: 1px 10px 0 10px;
+}
+
+.chatBlock p.additionalLine {
+    margin-top: 5px;
+}
+
+.chatBlock p:nth-child(2) {
+    margin-top: 0;
+}
+
+.chatBlock td {
+    padding: 8px 0;
+}
+
+.fileBlock .icon {
+    margin: 2px 7px 4px 0;
+}
+
+.fileBlock .fileSize {
+    color: #666;
+}
+
+.linkBlock .icon {
+    height: 16px;
+    width: 16px;
+    margin: 2px 5px 4px 10px;
+    vertical-align: middle;
+    float: left;
+}
+
+.linkBlock .linkPreview {
+    margin-top: 5px;
+}
+
+.linkBlock .linkPreview:first-child {
+    margin-top: 0;
+}
+
+.linkBlock .linkPreview p {
+    margin: 0;
+    margin-left: 30px;
+}
+
+.me {
+    background-color: #F3F7FB;
+    border-top-color: #FFFFFF;
+}
+
+.them {
+    background-color: #fff;
+}
+
+.messageBlock img {
+    vertical-align: middle;
+}
+
+.messageBlock {
+}
+
+.me .messageBlock {
+    vertical-align: middle;
+    margin-bottom: 4px;
+}
+
+.messageBlock .monospace {
+    font-family: monospace;
+}
+
+.messageBlock .msgText {
+    clear: left;
+}
+
+.messageBlock .msgText:nth-child(2) {
+    margin-top: 1px;
+}
+
+.messageBlock .msgTextError {
+    clear: left;
+    color: #ABABAB;
+    padding-left: 21px;
+    background: url('yield.png') no-repeat left center;
+}
+
+.messageBlock .msgTextError a {
+    color: #9999EE;
+}
+
+.messageBlock pre {
+    font-family: monospace;
+    margin: 5px 10px 0 10px;
+    white-space: pre-wrap;
+    tab-interval: 10px;
+}
+
+.messageBlock pre:first-child, .messageBlock pre:nth-child(2) {
+    margin-top: 0;
+}
+
+.messageBlock pre * {
+    font-family: monospace;
+}
+
+.messageBlock .monospace * {
+    font-family: monospace;
+}
+
+.messageBlock img[align='left'] {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.nameBlock {
+    vertical-align: top;
+    text-align: right;
+}
+
+.nameBlock p {
+    color: #707070;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-top: 1px;
+}
+
+.nameBlock a {
+    color: #707070;
+    text-decoration: none;
+}
+
+.me .nameBlock p {
+    color: #707070;
+}
+
+.me .nameBlock {
+    border-top-color: #F3F7FB;
+}
+/* Add padding to make up for the missing borders on name/message blocks */
+.infoBlock p {
+    color: #999;
+    padding-left: 2px;
+}
+
+.infoBlock .messageBlock {
+    border-left: none;
+}
+
+.infoBlock .nameBlock {
+    background-color: inherit;
+    border: none;
+}
+/* Time blocks are different on the iPhone client - they are floated 'p' blocks instead of seprate table cells
+	Use p.timeBlock so we override the default info block p style */
+p.timeBlock {
+    white-space: nowrap;
+    color: #999;
+    text-align: right;
+    vertical-align: top;
+    float: right;
+    margin-top: 3px;
+}
+
+.systemMessage, .systemMessage.yellow {
+    background-color: #FFFBE7;
+}
+
+.systemMessage .nameBlock, .systemMessage.yellow .nameBlock {
+    border-top-color: #FFFAEA;
+    border-right-color: #FFFAEA;
+}
+
+.systemMessage .messageBlock {
+    margin-bottom: 4px;
+}
+
+.systemMessage.red {
+    background-color: #F9E6E6;
+}
+
+.systemMessage.red .nameBlock {
+    border-top-color: #FFF2F2;
+}
+
+.systemMessage.gray {
+    background-color: #F4F4F4;
+}
+
+.systemMessage.gray .nameBlock {
+    border-top-color: #f5f5f5;
+}
+
+.systemMessage.purple {
+    background-color: #F2F4FD;
+}
+
+.systemMessage.purple .nameBlock {
+    border-top-color: #EEE8FC;
+}
+
+.systemMessage.green {
+    background-color: #F5F8E6;
+}
+
+.systemMessage.green .nameBlock {
+    border-top-color: #FFFAEA;
+}
+
+.welcomeMessage {
+    background-color: #F5F8E7;
+    border-top-color: #BDE18C;
+}
+
+.welcomeMessage .nameBlock {
+    color: #75510F;
+    border-top-color: #FFFAEA;
+}
+
+.welcomeMessage .messageBlock {
+    margin-bottom: 4px;
+}
+
+#chat_state {
+    padding: 3px 5px 4px 138px;
+    display: none;
+}
+
+.tooltip {
+    position: absolute;
+    display: none;
+    color: #fff;
+}
+
+.atTag {
+    display: inline-block;
+    padding: 0 3px;
+    border: 1px solid #D0D0D0;
+    background-color: #F5F5F5;
+    -webkit-border-radius: 4px;
+}
+
+.atTagMe {
+    color: #fff;
+    border: 1px solid #4783BF;
+    background: #3572b0;
+}
+
+.hexPreview {
+    -webkit-border-radius: 3px;
+    text-decoration: none;
+    border: 1px solid #999;
+    padding: 0 5px;
+    width: 15px;
+}
+
+.image {
+    margin: 5px 10px;
+}
+
+p.hiddenImage {
+    font-style: italic;
+    margin-left: 0;
+}
+
+p.hiddenImage a {
+    text-decoration: none;
+    color: #999;
+}
+
+p.hiddenImage a:hover {
+    text-decoration: underline;
+}
+
+.dateDivider {
+    text-align: center;
+    height: 1px;
+    background-color: #e5e5e5;
+    margin: 30px 0;
+}
+
+.dateDivider span {
+	background-color: #fff;
+	font-size: 16px;
+	color: #333;
+	font-weight: normal;
+	position: relative;
+	top: -10px;
+	padding: 0 10px;
+}
+
+.xdateDivider:first-line {
+    background-color: white;
+}
+.xdateDivider:before {
+    content: "-_";
+    color: white;
+    background-color: white;
+}
+.xdateDivider:after {
+    content: "-_";
+    color: white;
+    background-color: white;
+}
+
+.chatDivider {
+    background-color: #3572b0;
+    color: #fff;
+    height: 2px;
+}
+
+.preview {
+    padding: 3px 0;
+    background-color: #F5F5F5;
+}
+.fileBlock .preview {
+    background-color: inherit;
+}
+
+.preview td {
+    padding: 0;
+    vertical-align: top;
+}
+.preview p {
+    margin: 0 10px;
+}
+
+.preview .hide, .fileBlock .hide {
+    padding: 5px 10px 10px 10px;
+    float: right;
+    margin: -2px 10px 0 0;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.linkImage {
+    float: left;
+    margin: 5px 10px;
+}
+
+
+.scrollAnchor {
+    display: block;
+    position: relative;
+    top: -42px;
+}
+
+.tooltip {
+    position: absolute;
+    z-index: 10;
+    padding: 3px;
+    background-color: #333;
+    border: 1px solid #000;
+    opacity: 0.9;
+    display: none;
+    border-radius: 6px;
+}
+
+.tooltip a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.unconfirmedIcon {
+    float: left;
+    padding-right: 5px;
+}
+
+.truncated {
+    max-height: __TRUNCATION_HEIGHT__;
+    text-overflow: clip;
+    overflow: hidden;
+    padding-left: 10px;
+}
+
+.untruncated {
+    padding-left: 10px;
+}
+
+.showHideLinkContainer {
+	margin-top: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: monospace;
+}
+.truncated+.showHideLinkContainer {
+    border-top: 1px solid #efefef;
+}
+
+.prettyprinted {
+	background-color: #efefef;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	padding: 5px;
+}
+.timeBlock ~ .prettyprinted {
+	margin-right: 100px;
+}
+
+#load_history_button {
+    padding: 9px 0 8px 0;
+    background-color: #dedede;
+    text-align: center;
+    display: none;
+}
+#loading_spinner {
+    padding: 9px 0 8px 0;
+    background-color: #dedede;
+    text-align: center;
+    display: none;
+}
