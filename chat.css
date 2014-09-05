@@ -128,7 +128,7 @@ table {
 }
 
 .messageBlock .monospace {
-    font-family: monospace;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 .messageBlock .msgText {
@@ -151,7 +151,7 @@ table {
 }
 
 .messageBlock pre {
-    font-family: monospace;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     margin: 5px 10px 0 10px;
     white-space: pre-wrap;
     tab-interval: 10px;
@@ -162,11 +162,11 @@ table {
 }
 
 .messageBlock pre * {
-    font-family: monospace;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 .messageBlock .monospace * {
-    font-family: monospace;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 .messageBlock img[align='left'] {
@@ -448,17 +448,19 @@ p.hiddenImage a:hover {
     padding-top: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    font-family: monospace;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 .truncated+.showHideLinkContainer {
     border-top: 1px solid #efefef;
 }
 
 .prettyprinted {
-	background-color: #efefef;
-	border: 1px solid #cccccc;
+	background-color: #f6f6f6;
+	border: 1px solid #dddddd;
 	border-radius: 3px;
-	padding: 5px;
+	padding: 5px 10px;
+    /* Had to go medieval to get font size to take effect here, not sure why */
+    font-size: 11px !important;
 }
 .timeBlock ~ .prettyprinted {
 	margin-right: 100px;
