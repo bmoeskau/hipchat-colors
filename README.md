@@ -1,6 +1,6 @@
 # HipChat Colors
 
-HipChat 3.0 really screwed up the color scheme, particularly when it comes to system messages (like webhooks messages received from external APIs). Luckily, the UI is styled via standard CSS that is easily accessible inside the Hipchat package on OSX, so I immediately reverted the colors to the 2.x styles (well, close enough).
+HipChat 3.0 really screwed up the color scheme, particularly when it comes to system messages (like webhooks messages received from external APIs). Luckily, the UI is styled via standard CSS that is easily accessible inside the HipChat package on OSX, so I immediately reverted the colors to the 2.x styles (well, close enough).
 
 You can see the original HipChat 3.0 colors on the left, and the reverted version that you'll get with this file on the right:
 
