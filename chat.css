@@ -73,8 +73,7 @@ table {
 }
 
 .chatBlock td {
-    padding: 4px 0;
-    font-size: 13px;
+    padding: 6px 0;
 }
 
 .fileBlock .icon {
@@ -459,8 +458,6 @@ p.hiddenImage a:hover {
 	border: 1px solid #dddddd;
 	border-radius: 3px;
 	padding: 5px 10px;
-    /* Had to go medieval to get font size to take effect here, not sure why */
-    font-size: 11px !important;
 }
 .timeBlock ~ .prettyprinted {
 	margin-right: 100px;
