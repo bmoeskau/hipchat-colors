@@ -176,6 +176,7 @@ table {
 .nameBlock {
     vertical-align: top;
     text-align: right;
+    background-color: #f6f6f6;
 }
 
 .nameBlock p {
