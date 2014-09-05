@@ -6,9 +6,14 @@ You can see the original HipChat 3.0 colors on the left, and the reverted versio
 
 ![](https://github.com/bmoeskau/hipchat-colors/blob/master/hipchat-colors.jpg)
 
-This css file also reverts the default blue color of your own messages to pre-3.0 colors (not pictured). If you are curious about exactly what changes were made, check out [this commit](https://github.com/bmoeskau/hipchat-colors/commit/906ab261a8d74fb8cbb0c4c952611f3560013c13) (there's not much to it).
+Other tweaks (so far):
 
-The styles could definitely be improved upon (knock yourself out!), but I just wanted a quick fix so I can get back to work, and I was perfectly happy with the old colors.
+- Switched the "you" name block to a slightly darker gray
+- Switched the "me" message blocks back to a proper blue
+- Reduced the overall message font size and padding slightly to tighten things up
+- Fixed code blocks (switched to the standard Github code font list: `font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;` and lightened up the background color)
+
+These styles could definitely be improved upon further (knock yourself out!), but I just wanted a quick fix so I can get back to work, and I was perfectly happy with the old colors.
 
 ## "Installation"
 
