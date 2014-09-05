@@ -23,8 +23,9 @@ These styles could definitely be improved upon further (knock yourself out!), bu
 2. Locate the HipChat app file in `/Applications`
 2. Right-click the app icon in Finder and select "Show Package Contents"
 3. Navigate to `/Applications/Hipchat/Contents/Resources/` where you'll find mostly image files, plus a few css files
-4. If you want to play it safe (recommended) rename `chat.css` to `chat.css.old`
-5. Copy the `chat.css` from this repo into that folder and restart HipChat
+4. If you want to play it safe (recommended) back up or rename `chat.css` and `chat-osx.css`
+5. Copy `chat.css` and `chat-osx.css` from this repo into that folder and restart HipChat
 6. Get back to enjoying your chats
 
-Feel free to explore and further edit your own copy of the file. There is also a file named `chat-osx.css` that presumably overrides the default file, but I have not played around with that.
+## A Note About Font Size
+The `chat-osx.css` seems to override a few things, although it's unclear to me why it's a separate file. The important thing is that the overall font size is specified there as a percentage, allowing for `⌘ +`, `⌘ -` and `⌘ 0` to increase, decrease and reset the font size dynamically in the UI. You should stick to adjusting this percentage rather than hard-coding fonts in `px` if you care about such things.
