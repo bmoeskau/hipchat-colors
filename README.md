@@ -13,6 +13,8 @@ Other tweaks (so far):
 - Reduced the overall message font size and padding slightly to tighten things up
 - Fixed code blocks (switched to the standard Github code font list: `font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;` and lightened up the background color)
 
+![](https://github.com/bmoeskau/hipchat-colors/blob/master/hipchat-colors2.jpg)
+
 These styles could definitely be improved upon further (knock yourself out!), but I just wanted a quick fix so I can get back to work, and I was perfectly happy with the old colors.
 
 ## "Installation"
